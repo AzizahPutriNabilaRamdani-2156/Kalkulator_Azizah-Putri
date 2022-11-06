@@ -1,0 +1,179 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: 0;
+  transition: all 0.5s ease;
+}
+b {
+  text-align: center;
+  color: #421703;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(131, 14, 14);
+}
+
+body {
+  background-image: url('choco.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  place-items: center;
+}
+
+.calculator {
+  position: relative;
+  height: auto;
+  width: auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgb(43, 21, 1);
+}
+
+.theme-toggler {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  color: rgb(255, 136, 0);
+  cursor: pointer;
+  z-index: 1;
+}
+
+.theme-toggler.active {
+  color: rgb(68, 38, 4);
+}
+
+.theme-toggler.active::before {
+  background-color: rgb(250, 83, 6);
+}
+.theme-toggler::before {
+  content: '';
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background-color: rgb(107, 47, 7);
+  z-index: -1;
+}
+
+#display {
+  margin: 0 10px;
+  height: 150px;
+  width: auto;
+  max-width: 270px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  font-size: 30px;
+  margin-bottom: 20px;
+  overflow-x: scroll;
+}
+
+#display::-webkit-scrollbar {
+  display: block;
+  height: 3px;
+}
+
+button {
+  height: 60px;
+  width: 60px;
+  border: 0;
+  border-radius: 30px;
+  margin: 5px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 200ms ease;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+button#equal {
+  height: 130px;
+}
+
+/* Light theme */
+
+.calculator {
+  background-color: rgb(247, 90, 17);
+}
+
+.calculator #display {
+  color: #f07a0c;
+}
+
+.calculator button#clear {
+  background-color: #ff8800;
+  color: #72360e;
+}
+
+.calculator button.btn-number {
+  background-color: #ff4800;
+  color: #632c08;
+}
+.calculator button.btn-operator {
+  background-color: #ff8331;
+  color: #3f1d06;
+}
+
+.calculator button.btn-equal {
+  background-color: #ff8800;
+  color: #72360e;
+}
+
+/* dark theme */
+.calculator.dark {
+  background-color: #521a04;
+}
+
+.calculator.dark #display {
+  color: #4e1b03;
+}
+.calculator.dark button#clear {
+  background-color: #6b3807;
+  color: #682d05;
+}
+
+/* dark theme */
+
+.calculator.dark {
+  background-color: #311401;
+}
+
+.calculator.dark #display {
+  color: #441402;
+}
+.calculator.dark button#clear {
+  background-color: #3b1707;
+  color: #974b0d;
+}
+
+.calculator.dark button.btn-number {
+  background-color: #a7570c;
+  color: #3f1f04;
+}
+
+.calculator.dark button.btn-operator {
+  background-color: #381d03;
+  color: #b8591b;
+}
+
+.calculator.dark button.btn-equal {
+  background-color: #4e2f12;
+  color: #da5d0a;
+}
